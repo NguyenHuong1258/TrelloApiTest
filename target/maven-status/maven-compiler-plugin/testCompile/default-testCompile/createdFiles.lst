@@ -1,0 +1,7 @@
+ApiTests\selfTest\SelfHelperMethod.class
+ApiTests\selfTest\TestPOST.class
+ApiTests\exampleTest\TestCase2.class
+ApiTests\exampleTest\HelperMethods.class
+ApiTests\exampleTest\TestCase1.class
+ApiTests\selfTest\TestGET.class
+testSuite\AllApiTest.class
