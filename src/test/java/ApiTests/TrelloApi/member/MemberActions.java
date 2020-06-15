@@ -7,7 +7,7 @@ import utils.propertyReader.PropertyReaderManager;
 
 import java.util.ArrayList;
 
-public class Member {
+public class MemberActions {
     public static final String member = "/members/me/";
     private static String boardId;
     private static ArrayList listBoards;
@@ -16,14 +16,14 @@ public class Member {
 
 
     //Get list of Boards
-    public static ArrayList getListBoards (){
-        ArrayList listBoards;
+    public static ArrayList getBoardList (){
+        ArrayList boardList;
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
                 .queryParam("key", propReaderManager.getInstance().getApiReader().getkey())
                 .queryParam("token", propReaderManager.getInstance().getApiReader().getToken())
                 .get(propReaderManager.getInstance().getApiReader().getBaseUrl() + member);
-        listBoards= response.jsonPath().get("idBoards");
-        return listBoards;
+        boardList= response.jsonPath().get("idBoards");
+        return boardList;
     }
 }

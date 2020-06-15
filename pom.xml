@@ -69,7 +69,7 @@
                         <version>2.19.1</version>
                         <configuration>
                             <includes>
-                                <include>**/AllApiTest.class</include>
+                                <include>**/TrelloApiTestRunner.class</include>
                             </includes>
                         </configuration>
                     </plugin>

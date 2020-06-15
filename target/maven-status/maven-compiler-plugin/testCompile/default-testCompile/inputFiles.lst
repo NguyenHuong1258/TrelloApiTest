@@ -1,7 +1,13 @@
 C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\ApiTests\exampleTest\TestCase1.java
-C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\ApiTests\selfTest\TestGET.java
+C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\ApiTests\jsonplaceholderApi\SelfHelperMethod.java
+C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\ApiTests\TrelloApi\checklist\Checklist.java
+C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\ApiTests\jsonplaceholderApi\TestGET.java
+C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\testSuite\jsonplaceholderTest\AllApiTest.java
+C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\testSuite\TrelloApiRunner\TrelloApiTestRunner.java
+C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\ApiTests\TrelloApi\card\Card.java
 C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\ApiTests\exampleTest\TestCase2.java
-C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\testSuite\AllApiTest.java
-C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\ApiTests\selfTest\SelfHelperMethod.java
-C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\ApiTests\selfTest\TestPOST.java
+C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\ApiTests\TrelloApi\member\Member.java
+C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\testSuite\TrellooApiSutie\CreationBoard.java
 C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\ApiTests\exampleTest\HelperMethods.java
+C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\ApiTests\jsonplaceholderApi\TestPOST.java
+C:\Users\HNG18\Documents\JavaWorkSpaces\ApiTest\src\test\java\ApiTests\TrelloApi\board\Board.java

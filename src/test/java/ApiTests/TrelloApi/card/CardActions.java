@@ -1,4 +1,4 @@
 package ApiTests.TrelloApi.card;
 
-public class Card {
+public class CardActions {
 }

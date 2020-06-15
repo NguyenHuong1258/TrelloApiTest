@@ -1,38 +1,38 @@
-package ApiTests.TrelloApi.board;
+package ApiTests.TrelloApi.list;
 
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
 import utils.propertyReader.PropertyReaderManager;
 
-import java.util.ArrayList;
-
-
-public class Board {
-    public static final String board = "/boards/";
+public class ListActions {
+    public static final String list = "/lists";
     private static String boardId;
     private static PropertyReaderManager propReaderManager;
 
-    //Create a new Board
-    public static Response createBoard(String nameBoard){
+    //Create a new List
+    public static Response createList(String nameList, Object boardId){
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
                 .queryParam("key", propReaderManager.getInstance().getApiReader().getkey())
                 .queryParam("token", propReaderManager.getInstance().getApiReader().getToken())
-                .queryParam("name", nameBoard)
-                .post(propReaderManager.getInstance().getApiReader().getBaseUrl() + board);
-        boardId = response.getBody().jsonPath().getString("id");
+                .queryParam("name", nameList)
+                .queryParam("idBoard", boardId)
+                .post(propReaderManager.getInstance().getApiReader().getBaseUrl() + list);
         return response;
     }
 
-    //Delete Board
-    public static Response deleteBoard(Object boardId){
-        System.out.println("boardId is deleted: " + boardId);
+    //Move a list
+
+
+    //Archive a list
+    public static Response archiveList(Object listId){
+        System.out.println("ListId is deleted: " + listId);
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
                 .queryParam("key", propReaderManager.getInstance().getApiReader().getkey())
                 .queryParam("token", propReaderManager.getInstance().getApiReader().getToken())
-                .delete(propReaderManager.getInstance().getApiReader().getBaseUrl() + board+ boardId);
+                .put(propReaderManager.getInstance().getApiReader().getBaseUrl() + list + "/"+ listId+ "/"+ "closed");
         return response;
     }
 

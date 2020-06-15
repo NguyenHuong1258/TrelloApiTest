@@ -32,6 +32,11 @@ public class ApiReader {
 
     //=============================================================================================
 
+    //Get UserId
+    public String UserId(){
+        return properties.getProperty("Userid");
+    }
+
     //Get BaseURl
     public String getBaseUrl(){
         return properties.getProperty("baseUrl");

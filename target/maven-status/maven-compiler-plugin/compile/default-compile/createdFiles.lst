@@ -1,1 +1,3 @@
 utils\RestUtil.class
+utils\propertyReader\ApiReader.class
+utils\propertyReader\PropertyReaderManager.class
