@@ -6,7 +6,7 @@ public final class ApiCommonConstants {
     public static final String TOKEN = "token";
     public static final String NAMELIST = "name";
     public static final String NAMEBOARD = "name";
-    public static final String IDBOARD = "idBoard";
+    public static final String IDBOARD = "idBoards";
 
     private ApiCommonConstants() {
         throw new UnsupportedOperationException("This class cannot be instantiated");
