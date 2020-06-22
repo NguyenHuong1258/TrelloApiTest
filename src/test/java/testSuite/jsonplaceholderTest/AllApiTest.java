@@ -1,7 +1,7 @@
 package testSuite.jsonplaceholderTest;
 
 
-import ApiTests.jsonplaceholderApi.TestGET;
+import com.web.api.jsonplaceholderApi.TestGET;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

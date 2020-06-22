@@ -1,11 +1,12 @@
-package ApiTests.TrelloApi.member;
+package com.web.api.Trello.member;
 
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
+import com.web.api.constants.ApiCommonConstants;
 import utils.propertyReader.PropertyReaderManager;
-
 import java.util.ArrayList;
+
 
 public class MemberActions {
     public static final String member = "/members/me/";
@@ -20,10 +21,10 @@ public class MemberActions {
         ArrayList boardList;
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
-                .queryParam("key", propReaderManager.getInstance().getApiReader().getkey())
-                .queryParam("token", propReaderManager.getInstance().getApiReader().getToken())
+                .queryParam(ApiCommonConstants.KEY, propReaderManager.getInstance().getApiReader().getkey())
+                .queryParam(ApiCommonConstants.TOKEN, propReaderManager.getInstance().getApiReader().getToken())
                 .get(propReaderManager.getInstance().getApiReader().getBaseUrl() + member);
-        boardList= response.jsonPath().get("idBoards");
+        boardList= response.jsonPath().get(ApiCommonConstants.IDBOARD);
         return boardList;
     }
 }

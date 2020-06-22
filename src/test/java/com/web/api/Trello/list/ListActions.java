@@ -1,4 +1,4 @@
-package ApiTests.TrelloApi.list;
+package com.web.api.Trello.list;
 
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.http.ContentType;

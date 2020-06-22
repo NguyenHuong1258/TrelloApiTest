@@ -1,4 +1,4 @@
-package ApiTests.exampleTest;
+package com.web.api.exampleTest;
 
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.path.json.JsonPath;

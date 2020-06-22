@@ -1,4 +1,4 @@
-package ApiTests.TrelloApi.checklist;
+package com.web.api.Trello.checklist;
 
 import utils.propertyReader.PropertyReaderManager;
 

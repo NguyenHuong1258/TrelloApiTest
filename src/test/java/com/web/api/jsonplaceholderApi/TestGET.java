@@ -1,4 +1,4 @@
-package ApiTests.jsonplaceholderApi;
+package com.web.api.jsonplaceholderApi;
 
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.path.json.JsonPath;

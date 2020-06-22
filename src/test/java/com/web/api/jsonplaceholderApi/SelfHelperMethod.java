@@ -1,4 +1,4 @@
-package ApiTests.jsonplaceholderApi;
+package com.web.api.jsonplaceholderApi;
 
 
 public class SelfHelperMethod {

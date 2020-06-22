@@ -1,11 +1,11 @@
-package ApiTests.exampleTest;
+package com.web.api.exampleTest;
 
 /*
 Collect all helpers which be able to reusable in 2 class TestCase1 & TestCase2
 */
 
 import com.jayway.restassured.path.json.JsonPath;
-import com.jayway.restassured.response.Response;
+
 import java.util.*;
 
 

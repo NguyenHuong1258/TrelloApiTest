@@ -1,7 +1,7 @@
 package testSuite.TrellooApiSutie;
 
-import ApiTests.TrelloApi.board.BoardActions;
-import ApiTests.TrelloApi.member.MemberActions;
+import com.web.api.Trello.board.BoardActions;
+import com.web.api.Trello.member.MemberActions;
 import com.jayway.restassured.response.Response;
 import org.junit.Test;
 import java.util.ArrayList;

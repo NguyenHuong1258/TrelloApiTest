@@ -1,8 +1,9 @@
-package ApiTests.TrelloApi.board;
+package com.web.api.Trello.board;
 
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
+import com.web.api.constants.ApiCommonConstants;
 import utils.propertyReader.PropertyReaderManager;
 
 import java.util.ArrayList;
@@ -17,11 +18,11 @@ public class BoardActions {
     public static Response createBoard(String nameBoard){
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
-                .queryParam("key", propReaderManager.getInstance().getApiReader().getkey())
-                .queryParam("token", propReaderManager.getInstance().getApiReader().getToken())
-                .queryParam("name", nameBoard)
+                .queryParam(ApiCommonConstants.KEY, propReaderManager.getInstance().getApiReader().getkey())
+                .queryParam(ApiCommonConstants.TOKEN, propReaderManager.getInstance().getApiReader().getToken())
+                .queryParam(ApiCommonConstants.NAMEBOARD, nameBoard)
                 .post(propReaderManager.getInstance().getApiReader().getBaseUrl() + board);
-        boardId = response.getBody().jsonPath().getString("id");
+        boardId = response.getBody().jsonPath().getString(ApiCommonConstants.IDBOARD);
         return response;
     }
 
@@ -30,8 +31,8 @@ public class BoardActions {
         System.out.println("boardId is deleted: " + boardId);
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
-                .queryParam("key", propReaderManager.getInstance().getApiReader().getkey())
-                .queryParam("token", propReaderManager.getInstance().getApiReader().getToken())
+                .queryParam(ApiCommonConstants.KEY, propReaderManager.getInstance().getApiReader().getkey())
+                .queryParam(ApiCommonConstants.TOKEN, propReaderManager.getInstance().getApiReader().getToken())
                 .delete(propReaderManager.getInstance().getApiReader().getBaseUrl() + board+ boardId);
         return response;
     }
@@ -47,8 +48,8 @@ public class BoardActions {
         ArrayList listsOnBoard;
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
-                .queryParam("key", propReaderManager.getInstance().getApiReader().getkey())
-                .queryParam("token", propReaderManager.getInstance().getApiReader().getToken())
+                .queryParam(ApiCommonConstants.KEY, propReaderManager.getInstance().getApiReader().getkey())
+                .queryParam(ApiCommonConstants.TOKEN, propReaderManager.getInstance().getApiReader().getToken())
                 .get(propReaderManager.getInstance().getApiReader().getBaseUrl() + board + "/" + boardId + "/" + "lists");
         System.out.println(propReaderManager.getInstance().getApiReader().getBaseUrl() + board + boardId + "/" + "lists");
         listsOnBoard= response.jsonPath().get("id");
